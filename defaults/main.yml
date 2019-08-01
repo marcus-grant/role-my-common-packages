@@ -19,5 +19,4 @@ common_packages:
   - ncdu
   - htop
   - iotop
-  - xclip
   - tldr
