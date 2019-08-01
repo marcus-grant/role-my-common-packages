@@ -31,7 +31,6 @@ def test_hosts_file(host):
     'ncdu',
     'htop',
     'iotop',
-    'xclip',
     'tldr',
     'cowsay',
     'cowfortune',
