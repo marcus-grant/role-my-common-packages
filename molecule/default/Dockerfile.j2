@@ -6,5 +6,6 @@ FROM {{ item.registry.url }}/{{ item.image }}
 FROM {{ item.image }}
 {% endif %}
 
-RUN pacman -Sy --noconfirm && pacman -S python --noconfirm
+RUN if [ $(command -v apt-get) ]; then apt-get update && apt-get install -y python sudo bash ca-certificates && apt-get clean; \
+    elif [ $(command -v pacman) ]; then pacman -Sy --noconfirm && pacman -S python --noconfirm
     

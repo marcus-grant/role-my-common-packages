@@ -1,22 +1,22 @@
 ---
 # defaults file for my-common-packages
 common_packages:
-  - openssh
-  - openssl
-  - keychain
-  - wget
-  - curl
-  - unzip
-  - git
-  - tig
-  - vim
-  - tmux
-  - fzf
-  - fd
-  - ripgrep
-  - tree
-  - ranger
-  - ncdu
-  - htop
-  - iotop
-  - tldr
+  - { pacman: openssh, apt: openssh }
+  - { pacman: openssl, apt: openssl }
+  - { pacman: keychain, apt: keychain }
+  - { pacman: wget, apt: wget }
+  - { pacman: curl, apt: curl }
+  - { pacman: unzip, apt: unzip }
+  - { pacman: git, apt: git }
+  - { pacman: tig, apt: tig }
+  - { pacman: vim, apt: vim }
+  - { pacman: tmux, apt: tmux }
+  - { pacman: fzf, apt: fzf }
+  - { pacman: fd, apt: fd-find }
+  - { pacman: ripgrep, apt: ripgrep }
+  - { pacman: tree, apt: tree }
+  - { pacman: ranger, apt: ranger }
+  - { pacman: ncdu, apt: ncdu }
+  - { pacman: htop, apt: htop }
+  - { pacman: iotop, apt: iotop }
+  - { pacman: tldr, apt: tldr }

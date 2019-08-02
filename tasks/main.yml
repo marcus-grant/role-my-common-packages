@@ -1,7 +1,15 @@
 ---
 # tasks file for my-common-packages
-- name: install packages in common_packages
+- name: install packages in common_packages using pacman
   package:
-    name: '{{ item }}'
+    name: '{{ item.pacman }}'
     state: present
   loop: '{{ common_packages }}'
+  when: ansible_facts['os_family'] == 'Archlinux'
+
+- name: install packages in common_packages using aptitude
+  apt:
+    name: '{{ item.apt }}'
+    state: present
+  loop: '{{ common_packages }}'
+  when: ansible_facts['os_family'] == 'Debian'

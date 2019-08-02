@@ -4,6 +4,8 @@ To-Do's
 In-Progress
 -----------
 
+- [ ] Figure out why there's permission errors in /tmp during testing
+
 Planning
 --------
 

@@ -6,8 +6,10 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
+  - name: arch-instance
     image: archlinux/base
+  - name: debian-instance
+    image: debian10
 provisioner:
   name: ansible
   lint:
