@@ -1,7 +1,7 @@
 ---
 # defaults file for my-common-packages
 common_packages:
-  - { pacman: openssh, apt: openssh }
+  - { pacman: openssh, apt: openssh-server }
   - { pacman: openssl, apt: openssl }
   - { pacman: keychain, apt: keychain }
   - { pacman: wget, apt: wget }
