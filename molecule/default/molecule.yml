@@ -9,7 +9,7 @@ platforms:
   - name: arch-instance
     image: archlinux/base
   - name: debian-instance
-    image: debian10
+    image: debian:buster
 provisioner:
   name: ansible
   lint:
