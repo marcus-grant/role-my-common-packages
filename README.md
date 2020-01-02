@@ -1,6 +1,8 @@
 Role Name
 =========
 
+Abandoned: Replaced by **insert here**
+
 A brief description of the role goes here.
 
 Requirements

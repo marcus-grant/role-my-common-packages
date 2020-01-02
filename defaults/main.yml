@@ -1,22 +1,22 @@
 ---
 # defaults file for my-common-packages
 common_packages:
-  - { pacman: openssh, apt: openssh-server }
-  - { pacman: openssl, apt: openssl }
-  - { pacman: keychain, apt: keychain }
-  - { pacman: wget, apt: wget }
-  - { pacman: curl, apt: curl }
+  - { pacman: openssh, apt: openssh-server, yum: openssh-server }
+  - { pacman: openssl, apt: openssl, yum: openssl }
+  - { pacman: keychain, apt: keychain, yum: skip }
+  - { pacman: wget, apt: wget, yum: wget }
+  - { pacman: curl, apt: curl, yum: curl }
   - { pacman: unzip, apt: unzip }
-  - { pacman: git, apt: git }
-  - { pacman: tig, apt: tig }
-  - { pacman: vim, apt: vim }
-  - { pacman: tmux, apt: tmux }
-  - { pacman: fzf, apt: fzf }
-  - { pacman: fd, apt: fd-find }
-  - { pacman: ripgrep, apt: ripgrep }
-  - { pacman: tree, apt: tree }
-  - { pacman: ranger, apt: ranger }
-  - { pacman: ncdu, apt: ncdu }
-  - { pacman: htop, apt: htop }
-  - { pacman: iotop, apt: iotop }
-  - { pacman: tldr, apt: tldr }
+  - { pacman: git, apt: git, yum: git }
+  - { pacman: tig, apt: tig, yum: skip }
+  - { pacman: vim, apt: vim, yum: vim }
+  - { pacman: tmux, apt: tmux, yum: tmux }
+  - { pacman: fzf, apt: fzf, yum: fzf }
+  - { pacman: fd, apt: fd-find, yum: fd-find }
+  - { pacman: ripgrep, apt: ripgrep, yum: ripgrep }
+  - { pacman: tree, apt: tree, yum: tree }
+  - { pacman: ranger, apt: ranger, yum: ranger }
+  - { pacman: ncdu, apt: ncdu, yum: ncdu }
+  - { pacman: htop, apt: htop, yum: htop }
+  - { pacman: iotop, apt: iotop, yum: iotop }
+  - { pacman: tldr, apt: tldr, yum: tldr }

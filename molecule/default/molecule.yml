@@ -10,6 +10,8 @@ platforms:
     image: archlinux/base
   - name: debian-instance
     image: debian:buster
+  - name: fedora-instance
+    image: fedora:31
 provisioner:
   name: ansible
   lint:

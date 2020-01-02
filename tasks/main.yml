@@ -1,18 +1,32 @@
 ---
 # tasks file for my-common-packages
 # TODO one potential way to do this cleaner is to add a set fact to create the list
-- name: install packages in common_packages using pacman
-  become: yes
-  package:
-    name: '{{ item.pacman }}'
-    state: present
-  loop: '{{ common_packages }}'
-  when: ansible_facts['os_family'] == 'Archlinux'
+block:
+  - name: install packages in common_packages using aptitude
+    become: yes
+    apt:
+      name: '{{ item.apt }}'
+      state: present
+    loop: '{{ common_packages }}'
+    when: (item.apt is defined) && (item.apt != 'skip')
+when: ansible_facts['os_family'] == 'Debian'
 
-- name: install packages in common_packages using aptitude
-  become: yes
-  apt:
-    name: '{{ item.apt }}'
-    state: present
-  loop: '{{ common_packages }}'
-  when: ansible_facts['os_family'] == 'Debian'
+block:
+  - name: install packages in common_packages using yum
+    become: yes
+    yum:
+      name: '{{ item.yum }}'
+      state: present
+    loop: '{{ common_packages }}'
+    when: (item.yum is defined) && (item.yum != 'skip')
+when: ansible_facts['os_family'] == 'RedHat'
+
+block:
+  - name: install packages in common_packages using pacman
+    become: yes
+    package:
+      name: '{{ item.pacman }}'
+      state: present
+    loop: '{{ common_packages }}'
+    when: (item.pac is defined) && (item.pac != 'skip')
+when: ansible_facts['os_family'] == 'Archlinux'
